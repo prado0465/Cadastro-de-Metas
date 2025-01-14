@@ -1,38 +1,117 @@
-.App {
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+h1 {
   text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+  font-weight: bold;
+  color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="date"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+
+button.add-meta {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.add-meta:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.slick-slider {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.slick-slide {
+  text-align: center;
+  padding: 10px;
+}
+
+.slick-slide button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.slick-slide button:hover {
+  background-color: #0056b3;
+}
+
+.slick-slide button.active {
+  background-color: #28a745;
+}
+
+.slick-dots li button:before {
+  color: #007bff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #28a745;
+}
+
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+div.error {
+  color: red;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  input[type="date"],
+  input[type="number"] {
+    width: calc(100% - 10px);
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    padding: 8px 16px;
   }
 }
